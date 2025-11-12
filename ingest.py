@@ -1,12 +1,7 @@
 import requests
 import json
-import datetime
-import time
-import random
 from datetime import datetime
 import pandas as pd
-import streamlit as st
-
 
 
 BASE_URL = "https://apache-api.onrender.com/logs"
