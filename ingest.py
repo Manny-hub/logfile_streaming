@@ -1,6 +1,7 @@
 import requests
 import json
 from datetime import datetime
+import time
 import pandas as pd
 
 
@@ -40,6 +41,8 @@ streams= extract()
 # extract() # Uncomment to run the extract function directly
 for stream in streams:
     data = stream["response"]
+    
+    # print(type(data)) # Check the type of data received
 
     if isinstance(data, list):
         for item in data:
