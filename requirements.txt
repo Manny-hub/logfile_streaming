@@ -1,0 +1,4 @@
+pandas 
+requests
+pycodestyle>=2.8.0
+streamlit
