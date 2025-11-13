@@ -3,9 +3,9 @@ import json
 from datetime import datetime
 import time
 import pandas as pd
+import pprint
 
-
-BASE_URL = "https://apache-api.onrender.com/logs"
+BASE_URL =  "https://apache-api.onrender.com/logs" 
 
 def extract():
     
@@ -46,7 +46,7 @@ for stream in streams:
 
     if isinstance(data, list):
         for item in data:
-            print(f"{stream['timestamp']} — {item.get('raw_logs', item)}")
+            pprint.pprint(f"{stream['timestamp']} — {item.get('raw_logs', item)}")
 
     elif isinstance(data, dict):
         raw_logs = data.get("raw_logs")
