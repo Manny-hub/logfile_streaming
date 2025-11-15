@@ -37,9 +37,10 @@ def extract():
         print(f"Error fetching data: {e}")
         return {"error": str(e)}
     
-streams= extract()
 
 # # extract() # Uncomment to run the extract function directly
+# # Testing extract() function
+# streams = extract()
 # for stream in streams:
 #     data = stream["response"]
     
@@ -95,10 +96,10 @@ def processor(log_content):
     return log_entries, error_entries
 
 
-# Replace your etl() with this minimal working version
+
 def etl():
     print("Starting ETL process...")
-    # use a fresh generator instance so we don't accidentally reuse a consumed one
+   
     streams = extract()
 
     for stream in streams:
@@ -139,7 +140,7 @@ def etl():
 
         # To avoid an infinite run while testing, you can break after the first iteration.
         # Remove the next line if you want continuous streaming:
-        # break
+        break
 
 
 # Ensure the script runs when executed directly
